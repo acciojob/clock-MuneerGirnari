@@ -3,13 +3,9 @@
 const now = new Date();
 let container = document.getElementById("timer");
 function updateDateTime(){
-    let timer = now.toLocaleTimeString();
+    let timer = now.toLocaleString();
 
-    let date = now.toLocaleDateString();
-
-    let string = date +" , " + timer;
-
-    container.innerText = `${date}, ${timer}`;
+    container.innerText = `${timer}`;
 }
 
 setInterval(updateDateTime, 1000);
